@@ -1,0 +1,18 @@
+# Visual Studio Code settings for debugging the generator
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug generator",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/generator",
+            "args": ["${workspaceFolder}/GPIO_svd.txt", "${workspaceFolder}/out"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb"
+        }
+    ]
+}
