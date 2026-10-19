@@ -1,0 +1,13 @@
+// Example HGLETL template (Mustache-like) for TIM1. Adapt placeholder syntax to your HGLETL if needed.
+Peripheral: {{peripheral.name}} (base {{peripheral.baseAddress}})
+
+{{#registers}}
+/* Register: {{name}} (offset {{addressOffset}}) */
+#define {{name}}_OFFSET {{addressOffset}}
+{{#fields}}
+/* Field: {{name}} pos={{bitOffset}} width={{bitWidth}} */
+#define {{name}}_POS {{bitOffset}}
+#define {{name}}_MASK ( ((1u<<{{bitWidth}})-1u) << {{bitOffset}} )
+{{/fields}}
+
+{{/registers}}
